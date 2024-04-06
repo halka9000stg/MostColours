@@ -1,19 +1,116 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
-    <title>most_colours</title>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="./assets/chocolatey.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk" />
+    <meta
+      property="og:description"
+      content="画像に含まれる色を集計し、その中でより多く含まれる-個の色を表示します。"
+    />
+    <meta
+      property="og:title"
+      content="MostColours: 画像に最も多く含まれる色の集計ツール"
+    />
+    <meta property="og:site_name" content="MostColours" />
+    <meta
+      property="og:image"
+      content="https://colours.dev-pack.org/web/assets/chocolatey.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://colours.dev-pack.org/web/" />
+    <meta name="theme-color" content="darksalmon" />
+    <title>MostColours: 画像に最も多く含まれる色の集計ツール</title>
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="main.dart.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="heading">
+      <div class="logo">
+        <image src="./assets/chocolatey.png" />
+      </div>
+      <div class="title">
+        <span>MostColours: 画像に最も多く含まれる色の集計ツール</span>
+      </div>
+      <div class="subtitle">
+        <span>by Haruka Sato </span><span>at 6 Apr 2024</span>
+        <span>© Haruka Sato 2024- under Mozilla Public License 2.0</span>
+      </div>
+    </div>
+    <div class="content">
+      <div id="form">
+        <div class="lead">
+          画像に含まれる色を集計し、その中でより多く含まれる-個の色を表示します。<br />
+          複数の画像ファイルを選択することもでき、その場合各々の画像について(個別に)集計します。裸の画像ファイルのみならず、画像ファイルを含む書庫ファイルにも対応しており、中身の画像が選択されたものとして(再帰的に)動作します。
+        </div>
+        <input type="file" accept="" multiple />
+        <div class="explanation"></div>
+      </div>
+      <div id="output"></div>
+    </div>
 
-  <div id="output"></div>
+    <div class="legend">
+      <!-- プログラムからoutputに出力されるタグ構造の凡例 -->
+      <!-- 正常結果表示 -->
+      <span>メッセージ</span>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Hex</th>
+              <th>RGB</th>
+              <th>PCCS Hue</th>
+              <th>Sample</th>
+            </tr>
+          </thead>
+        </table>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </div>
+      <a href="" download="">メッセージ</a>
 
-</body>
+      <!-- エラー1: ファイルが選択されてない, etc. -->
+      <span>メッセージ</span>
+
+      <!-- エラー2: 選択ファイル中に有効な種類のものがない, etc. -->
+      <span>メッセージ</span><br />
+      <ul>
+        <li>
+          <span>種類</span><br />
+          <ul>
+            <li>ファイル形式 (<code>拡張子</code>)</li>
+            <li>ファイル形式 (<code>拡張子</code>)</li>
+          </ul>
+        </li>
+        <li>
+          <span>種類</span><br />
+          <ul>
+            <li>ファイル形式 (<code>拡張子</code>)</li>
+            <li>ファイル形式 (<code>拡張子</code>)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>
