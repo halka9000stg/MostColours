@@ -25,6 +25,10 @@ html, body {
   grid-row: 1 / 3;
   background-color: chocolate;
 }
+.heading .logo img {
+  height: 100%;
+  aspect-ratio: 1;
+}
 .heading .title,
 .heading .subtitle{
   padding: 0.5rem;
