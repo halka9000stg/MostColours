@@ -12,6 +12,9 @@ dependencies:
   image: ^4.1.7
   archive: ^3.4.10
   color: ^3.0.0
+  yaml: ^3.1.2
+  yaml_writer: ^2.0.0
+  sorted: ^2.1.0
 
 dev_dependencies:
   build_runner: ^2.4.0
